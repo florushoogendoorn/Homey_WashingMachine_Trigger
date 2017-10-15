@@ -36,7 +36,7 @@ Object.values(devices).forEach(device => {
 
         // console.log('Last power change :', device.lastUpdated.measure_power, '('+noChange+' seconds)');            
 
-        if(device.state.measure_power === 0 && noChange > z && noChange < (z * 1.5)) {
+        if(device.state.measure_power === 0 && noChange > (z * 0.5) && noChange < (z * 1.5)) {
             wasmachine = true;
         }
     }
